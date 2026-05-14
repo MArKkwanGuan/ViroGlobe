@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mosq"
+version = "0.1.0"
+description = "Vectorized mosquito-borne disease simulation over static and climate grids."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=2.0",
+    "netCDF4>=1.7",
+    "cupy-cuda12x>=13.0; platform_system == 'Windows' or platform_system == 'Linux'",
+]
+
+[project.optional-dependencies]
+progress = ["tqdm>=4.66"]
+distributed = ["torch>=2.1"]
+
+[project.scripts]
+mosq = "mosq.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["mosq*"]
