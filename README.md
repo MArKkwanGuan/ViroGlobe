@@ -7,7 +7,6 @@ Jiarui Zhu, Xiangcheng Bao, Ziqian Guan, Danyang Chen, Fukang Ge, Yanrui Lu, Yut
 NeurIPS 2026 Evaluations and Datasets Track Submission  
 Initial submission: 01 May 2026  
 Last modified: 10 May 2026  
-Code license: MIT License
 
 Keywords: Mosquito-borne viruses; Cross-species transmission; Agent-based modeling; Multi-virus dynamics; GPU-accelerated simulation
 
@@ -15,7 +14,6 @@ ViroGlobe is a GPU-accelerated, high-resolution global simulator for multi-virus
 
 The simulator preserves key transmission processes including biting dynamics, infection pressure, vector competence, extrinsic incubation, recovery, severe disease progression, and mortality. Conventional CPU-style ABM updates are reformulated as GPU-vectorized matrix and tensor operations, enabling high-resolution global simulation, long-horizon forecasting, validation, and intervention analysis on a single NVIDIA A100 or Huawei Ascend 910B GPU.
 
-This folder is a GitHub-ready source release. It intentionally excludes local data, generated cache files, experiment outputs, and Python bytecode.
 
 ## Repository Layout
 
@@ -75,4 +73,3 @@ The default output directory is `output/mosq_vectorized_gpu/`.
 
 - GPU execution uses CuPy when available.
 - Distributed multi-GPU execution additionally requires PyTorch for `torch.distributed`.
-- `data/`, `output/`, `scratch/`, climate caches, `.npz`, and `.nc4` files are ignored by default to keep the GitHub repository source-only.
