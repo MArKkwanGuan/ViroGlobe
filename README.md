@@ -1,13 +1,26 @@
-# MOSQ
+# ViroGlobe
 
-Vectorized mosquito-borne disease simulation code for static geospatial layers and daily climate windows.
+**ViroGlobe: Scalable Agent-Based Modeling for High-Resolution, Global-Scale Mosquito-Borne Disease Benchmark and Simulator**
+
+Jiarui Zhu, Xiangcheng Bao, Ziqian Guan, Danyang Chen, Fukang Ge, Yanrui Lu, Yuting Wang, YAO ZIANG, Lin Gu, Jinhao Bi, Yingying Zhu
+
+NeurIPS 2026 Evaluations and Datasets Track Submission  
+Initial submission: 01 May 2026  
+Last modified: 10 May 2026  
+Code license: MIT License
+
+Keywords: Mosquito-borne viruses; Cross-species transmission; Agent-based modeling; Multi-virus dynamics; GPU-accelerated simulation
+
+ViroGlobe is a GPU-accelerated, high-resolution global simulator for multi-virus cross-species mosquito-borne transmission. It integrates climate, ecology, geography, host population, vector-related information, and epidemiological records into a unified spatiotemporal data layer, then simulates mosquito-borne transmission as a spatial agent-based model over tensors of cells, mosquito species, viruses, and time.
+
+The simulator preserves key transmission processes including biting dynamics, infection pressure, vector competence, extrinsic incubation, recovery, severe disease progression, and mortality. Conventional CPU-style ABM updates are reformulated as GPU-vectorized matrix and tensor operations, enabling high-resolution global simulation, long-horizon forecasting, validation, and intervention analysis on a single NVIDIA A100 or Huawei Ascend 910B GPU.
 
 This folder is a GitHub-ready source release. It intentionally excludes local data, generated cache files, experiment outputs, and Python bytecode.
 
 ## Repository Layout
 
 ```text
-mosq/                 Python package
+src/                  Python package source
 scripts/              Utility scripts for validation targets, benchmarks, and parameter training
 run.py                Compatibility CLI entry point
 requirements.txt      pip dependencies
